@@ -1,0 +1,2 @@
+On local side: Source control in Xcode just detects the new folder, but doesn't detect my LongestSubstring.playground file.
+Workaround: create the folder and this text file on GitHub

@@ -1,6 +1,4 @@
-import Foundation
-
-
+// https://leetcode.com/problems/number-of-islands/description/
 
 func numIslands(_ grid: [[Character]]) -> Int {
     let (rows, columns) = (grid.count, grid[0].count)

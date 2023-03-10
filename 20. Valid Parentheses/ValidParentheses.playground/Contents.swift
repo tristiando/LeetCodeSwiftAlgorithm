@@ -2,6 +2,10 @@
 class Stack<T> {
     var items: [T] = []
         
+    var description: String {
+        items.map { "\($0)" }.joined(separator: " ")
+    }
+    
     var isEmpty: Bool {
         items.isEmpty
     }
@@ -25,34 +29,29 @@ class Solution {
         
         let characters = Array(s)
         let stack = Stack<Character>()
-        let (openBrackets, closingBrackets) = ("([{", "}])")
         
         for c in characters {
-            if openBrackets.contains(c) {
-                stack.push(c)
-            } else if closingBrackets.contains(c) {
-                switch c {
-                case ")":
-                    if stack.peek() == "(" {
-                        stack.pop()
-                    } else {
-                        return false
-                    }
-                case "]":
-                    if stack.peek() == "[" {
-                        stack.pop()
-                    } else {
-                        return false
-                    }
-                case "}":
-                    if stack.peek() == "{" {
-                        stack.pop()
-                    } else {
-                        return false
-                    }
-                default:
+            switch c {
+            case ")":
+                if stack.peek() == "(" {
+                    stack.pop()
+                } else {
                     return false
                 }
+            case "]":
+                if stack.peek() == "[" {
+                    stack.pop()
+                } else {
+                    return false
+                }
+            case "}":
+                if stack.peek() == "{" {
+                    stack.pop()
+                } else {
+                    return false
+                }
+            default:
+                stack.push(c)
             }
         }
         return stack.isEmpty
@@ -60,4 +59,6 @@ class Solution {
 }
 
 let solution = Solution()
-print(solution.isValid("[["))
+let input1 = "[[", input2 = "()[]{}"
+print("\(input1), \(solution.isValid(input1))")
+print("\(input2), \(solution.isValid(input2))")

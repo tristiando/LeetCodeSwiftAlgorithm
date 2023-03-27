@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/median-of-two-sorted-arrays/
+// refer: https://www.interviewbit.com/blog/median-of-two-sorted-arrays/
 
 class Solution {
     static func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {

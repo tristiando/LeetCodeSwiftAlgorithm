@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/product-of-array-except-self/description/
+
 class Solution {
     func productExceptSelf(_ nums: [Int]) -> [Int] {
         let n = nums.count
@@ -20,10 +22,26 @@ class Solution {
         
         return arrResult
     }
+    
+    func productExceptSelf2(_ nums: [Int]) -> [Int] {
+        let n = nums.count
+        var result = Array(repeating: 1, count: n)
+        var left = 1, right = 1
+        
+        for i in 0..<n {
+            result[i] *= left
+            left *= nums[i]
+            
+            result[n - 1 - i] *= right
+            right *= nums[n - 1 - i]
+        }
+        
+        return result
+    }
 }
 
 let A = [1,2,3,4]
-print(Solution().productExceptSelf(A))
+print(Solution().productExceptSelf2(A))
 
 let B = [-1,1,0,-3,3]
-print(Solution().productExceptSelf(B))
+print(Solution().productExceptSelf2(B))

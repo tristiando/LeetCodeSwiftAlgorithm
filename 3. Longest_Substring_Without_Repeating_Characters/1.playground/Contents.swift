@@ -2,13 +2,16 @@
 
 import Foundation
 
-// O(n)
+// O(n). Sliding window technique
 func lengthOfLongestSubstring(_ s: String) -> Int {
     let string = Array(s)
     var chars = Set<Character>()
     var (left, result) = (0, 0)
 
     for (right, c) in s.enumerated() {
+        /**
+         The purpose of this step is to ensure that we are always working with a substring that does not have any repeating characters. If a repeating character is encountered, it means that we have reached the end of the current substring, and we need to move the left pointer to the right until the substring no longer contains the repeating character.
+         **/
         while chars.contains(c) {
             chars.remove(string[left])
             left += 1

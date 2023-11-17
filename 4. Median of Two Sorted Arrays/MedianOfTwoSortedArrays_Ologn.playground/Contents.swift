@@ -33,18 +33,22 @@ class Solution {
     }
 }
 
-//let A = [1, 3, 4, 6, 9]
-//let B = [2, 5, 7, 8, 10]
-//print(Solution().findMedianSortedArrays(A, B))
-//
-//let C = [1, 3, 8, 9, 15]
-//let D = [7, 11, 18, 19, 21, 25]
-//print(Solution().findMedianSortedArrays(C, D))
-//
-//let E = [23, 26, 31, 35]
-//let F = [3, 5, 7, 9, 11, 16]
-//print(Solution().findMedianSortedArrays(E, F))
+let A = [1, 3, 4, 6, 9]
+let B = [2, 5, 7, 8, 10]
+print(Solution().findMedianSortedArrays(A, B))
 
-let G = [3, 5, 7, 9, 11, 16, 18, 19, 20]
-let H = [6, 23, 26, 31, 35]
+let C = [1, 3, 8, 9, 15]
+let D = [7, 11, 18, 19, 21, 25]
+print(Solution().findMedianSortedArrays(C, D))
+
+let E = [23, 26, 31, 35]
+let F = [3, 5, 7, 9, 11, 16]
+print(Solution().findMedianSortedArrays(E, F))
+
+let G = [6, 23, 26, 31, 35]
+let H = [3, 5, 7, 9, 11, 16, 18, 19, 20]
 print(Solution().findMedianSortedArrays(G, H))
+
+let I = [1, 3]
+let J = [2]
+print(Solution().findMedianSortedArrays(I, J))

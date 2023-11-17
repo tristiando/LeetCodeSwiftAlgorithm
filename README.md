@@ -1,2 +1,2 @@
 # LeetCodeSwiftAlgorithm
-Collect algorithm problems from LeetCode: https://leetcode.com/problem-list/top-interview-questions/
+Solve algorithm problems from LeetCode: https://leetcode.com/problem-list/top-interview-questions/

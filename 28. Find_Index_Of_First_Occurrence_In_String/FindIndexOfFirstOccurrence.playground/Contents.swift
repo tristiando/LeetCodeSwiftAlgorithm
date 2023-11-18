@@ -3,14 +3,17 @@ class Solution {
         var i = 0, j = 0
         let boundary = haystack.count - needle.count + 1
         
+        let chars1 = Array(haystack)
+        let chars2 = Array(needle)
+        
         while i < boundary {
             var t = 0
-            while j < needle.count && needle[needle.index(needle.startIndex, offsetBy: j)] == haystack[haystack.index(haystack.startIndex, offsetBy: i + t)] {
+            while j < chars2.count && chars2[j] == chars1[i + t] {
                 j += 1
                 t += 1
             }
             
-            if t == needle.count {
+            if t == chars2.count {
                 return i
             } else {
                 i += 1

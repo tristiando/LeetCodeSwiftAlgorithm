@@ -3,6 +3,7 @@
 // 2.) If I subtract current price by the cheapest price I've found, does this yield a greater profit than what I've seen so far?
 // *
 
+// This solution takes O(n) < time < O(n2)
 class Solution {
     func maxProfit(_ prices: [Int]) -> Int {
         guard prices.count > 1 else { return 0 }
